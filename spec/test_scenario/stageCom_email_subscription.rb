@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'Stage.com - Create account' do
+  scenario 'Stage.com - Check email subscription' do
     caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
     caps_chrome['chromeOptions'] = {'mobileEmulation' => {
       'deviceMetrics' => { 'width' => 360, 'height' => 640, 'pixelRatio' => 3.0 },
@@ -14,7 +14,8 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 1
+    sleep 2
+
     #go to stage site and click to close modal
     #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
@@ -30,36 +31,35 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
     find(:xpath, ta(   'stageCom:mainPage:singUp')).click
 
+    #click on logo img
+    #find(:xpath, ta('stageCom:mainPage:subscriptionLink', "//p[@class='footer__title-text']/a")).click
+    #find(:xpath, "//p[@class='footer__title-text']/a").click
+    find(:xpath, ta(   'stageCom:mainPage:subscriptionLink')).click
+
     #enter first name
-    #find(:xpath, ta('stageCom:loginPage:firstName', "//input[@id='first-name']")).set('yourName')
-    #find(:xpath, "//input[@id='first-name']").set('yourName')
-    find(:xpath, ta(   'stageCom:loginPage:firstName')).set('yourName')
+    #find(:xpath, ta('stageCom:accountPage:subscriptionFirstName', "//input[@id='register-first-name']")).set('someName')
+    #find(:xpath, "//input[@id='register-first-name']")).set('someName')
+    find(:xpath, ta(   'stageCom:accountPage:subscriptionFirstName')).set('example@gmail.com')
 
     #enter last name
-    #find(:xpath, ta('stageCom:loginPage:lastName', "//input[@id='last-name']")).set('yourLastName')
-    #find(:xpath, "//input[@id='last-name']")..set('yourLastName')
-    find(:xpath, ta(   'stageCom:loginPage:lastName')).set('yourLastName')
+    #find(:xpath, ta('stageCom:accountPage:subscriptionLastName', "//input[@id='register-last-name']")).set('lastNAme')
+    #find(:xpath, "//input[@id='register-last-name']").set('lastNAme')
+    find(:xpath, ta(   'stageCom:accountPage:subscriptionLastName')).set('lastNAme')
 
     #enter email
-    #find(:xpath, ta('stageCom:loginPage:email', "//input[@id='email-address']")).set('email')
-    #find(:xpath, "//input[@id='email-address']").set('email')
-    find(:xpath, ta(   'stageCom:loginPage:email')).set('email')
+    #find(:xpath, ta('stageCom:accountPage:subscriptionEmail', "//input[@id='register-email']")).set('example@gmail.com')
+    #find(:xpath, "//input[@id='register-email']").set('example@gmail.com')
+    find(:xpath, ta(   'stageCom:accountPage:subscriptionEmail')).set('example@gmail.com')
 
-    #enter password
-    #find(:xpath, ta('stageCom:loginPage:password', "//input[@id='set-password']")).set('1234tesT')
-    #find(:xpath, "//input[@id='set-password']").set('1234tesT')
-    find(:xpath, ta(   'stageCom:loginPage:password')).set('1234tesT')
+    #enter phone
+    #find(:xpath, ta('stageCom:accountPage:subscriptionphone', "//input[@id='register-phone']")).set('+780956749323')
+    #find(:xpath, "//input[@id='register-phone']").set('+780956749323')
+    find(:xpath, ta(   'stageCom:accountPage:subscriptionphone')).set('+780956749323')
 
-    #confirm password
-    #find(:xpath, ta('stageCom:loginPage:confirmPassword', "//input[@id='confirm-password']")).set('1234tesT')
-    #find(:xpath, "//input[@id='confirm-password']").set('1234tesT')
-    find(:xpath, ta(   'stageCom:loginPage:confirmPassword')).set('1234tesT')
-
-    #click signUp to complete registration
+    #click signUp to complete
     #find(:xpath, ta('stageCom:loginPage:signUp', "//input[@value='Sign Up']")).click
     #find(:xpath, "//input[@value='Sign Up']").click
     find(:xpath, ta(   'stageCom:loginPage:signUp')).click
-
-    sleep 15
+    sleep 5
   end
 end
