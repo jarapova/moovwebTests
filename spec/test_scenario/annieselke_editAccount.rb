@@ -47,6 +47,10 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, ta('annieselke:accountPage:profileTitle', "//select[@id='profile.title']")).select('Ms')
     find(:xpath, ta(   'annieselke:accountPage:profileTitle')).select('Ms')
 
+    #click save updates
+    #find(:xpath, ta('annieselke:loginPage:saveUpdates', "//button[text()='Save Updates']")).click
+    #find(:xpath, "//button[text()='Save Updates']").click
+    find(:xpath, ta(   'annieselke:loginPage:saveUpdates')).click
     sleep 5
   end
 end

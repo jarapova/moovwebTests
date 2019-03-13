@@ -44,8 +44,8 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//input[@id='subscribe']").click
     find(:xpath, ta(   'annieselke:loginPage:subscribe')).click
 
-    #find(:xpath, ta('annieselke:loginPage:register', "//button[@class='primary actionSet']")).click
-    #find(:xpath, "//button[@class='primary actionSet']").click
+    #find(:xpath, ta('annieselke:loginPage:register', "(//button[@class='primary actionSet'])[2]")).click
+    #find(:xpath, "(//button[@class='primary actionSet'])[2]").click
     find(:xpath, ta(   'annieselke:loginPage:register')).click
 
     sleep 5
