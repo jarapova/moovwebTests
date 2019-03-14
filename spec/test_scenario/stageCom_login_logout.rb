@@ -1,7 +1,8 @@
+
 require 'spec_helper'
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'Stage.com - navigation to subcategory in hamburger menu' do
+  scenario 'Stage.com - login/logout' do
     caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
     caps_chrome['chromeOptions'] = {'mobileEmulation' => {
       'deviceMetrics' => { 'width' => 360, 'height' => 640, 'pixelRatio' => 3.0 },
@@ -14,48 +15,49 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 2
-
+    sleep 5
     #go to stage site and click to close modal
     #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
     find(:xpath, ta('stageCom:mainPage:modalClose')).click
 
+# logIn
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
     find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
 
-    #select category
-    #find(:xpath, ta('stageCom:mainPage:categoryMen', "//ul/a[@data-menu-id='Men']")).click
-    #find(:xpath, "//ul/a[@data-menu-id='Men']").click
-    find(:xpath, ta('stageCom:mainPage:categoryMen')).click
+    #click to sign in in top of page
+    #find(:xpath, ta('stageCom:mainPage:singIn', "//p[@class='m-menu__account__links']/a[text()='Sign in']")).click
+    #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
+    find(:xpath, ta('stageCom:mainPage:singIn')).click
 
-    #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategoryAllMen', "//a[text()='Shop All Men']")).click
-    #find(:xpath, "//a[text()='Shop All Men']").click
-    find(:xpath, ta('stageCom:mainPage:subcategoryAllMen')).click
+    #enter email
+    #find(:xpath, ta('stageCom:loginPage:accountEmail', "//input[@id='email']")).set('julia.arapova@softesis.com')
+    #find(:xpath, "//input[@id='email']").set('julia.arapova@softesis.com')
+    find(:xpath, ta('stageCom:loginPage:accountEmail')).set('julia.arapova@softesis.com')
 
+    #enter password
+    #find(:xpath, ta('stageCom:loginPage:accountPassword', "//input[@id='password']")).set('1234tesT')
+    #find(:xpath, "//input[@id='password']").set('1234tesT')
+    find(:xpath, ta('stageCom:loginPage:accountPassword')).set('1234tesT')
+
+    #click Sign In to login
+    #find(:xpath, ta('stageCom:loginPage:signIn', "//input[@value='sign in']")).click
+    #find(:xpath, "//input[@value='sign in']").click
+    find(:xpath, ta('stageCom:loginPage:signIn')).click
+
+# logOUT
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
     find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
 
-    #select category
-    #find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
-    #find(:xpath, "//ul/a[@data-menu-id='Kids']").click
-    find(:xpath, ta('stageCom:mainPage:categoryKids')).click
-
-    #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategoryBaby', "(//a[text()='Baby'])[1]")).click
-    #find(:xpath, "(//a[text()='Baby'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategoryBaby')).click
-
-    #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategoryBabyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
-    #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategoryBabyGirl')).click
-
+    #click Sign Out to login
+    #find(:xpath, ta('stageCom:loginPage:signOut', "//a[@class='sign-out']")).click
+    #find(:xpath, "//a[@class='sign-out']").click
+    find(:xpath, ta('stageCom:loginPage:signOut')).click
     sleep 5
+
   end
 end
