@@ -6,7 +6,7 @@
   Open hamburger menu and navigate to subcategory===========================Done
   User is able to reach Account page from hamburger menu====================Done
   Navigate to PDP from "Press" catalog======================================Done
-  Navigate to PDP from "Collections" page===================================
+  Navigate to PDP from "Collections" page===================================Done
   Navigate to PDP from "No Results" page========================================
   Navigate to PDP from search results===========================================
   Navigate to PDP from product suggestions (Complete the look)==================
@@ -16,7 +16,7 @@
   Find a store using "Store Finder"=============================================
   Apply filter to see filtered results==========================================
   Click on logo to navigate homepage============================================
-  Homepage contains expected content============================================
+  Homepage contains expected content======================================= Done
   Use navigation from home page to go to carousel options=======================
   Navigate to subcategory page using main navigation carousel===================
   Navigate to PDP page==========================================================
