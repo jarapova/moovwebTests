@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'Stage.com - Add item to wishlist' do
+  scenario 'Stage.com - Add item to cart from wish list' do
     caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
     caps_chrome['chromeOptions'] = {'mobileEmulation' => {
       'deviceMetrics' => { 'width' => 360, 'height' => 640, 'pixelRatio' => 3.0 },
@@ -25,6 +25,7 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
     find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
+
 
 ##  login in account
     #click to sign in in top of page
@@ -58,19 +59,21 @@ feature 'TrueAutomation.IO capybara example' do
     find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
 
     #select category
-    #find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
+    find(:xpath, ta('stageCom:mainPage:category:kids', "//ul/a[@data-menu-id='Kids']")).click
     #find(:xpath, "//ul/a[@data-menu-id='Kids']").click
-    find(:xpath, ta('stageCom:mainPage:categoryKids')).click
+    #find(:xpath, ta('stageCom:mainPage:category:kids')).click
 
     #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategor:baby', "(//a[text()='Baby'])[1]")).click
-    #find(:xpath, "(//a[text()='Baby'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:baby')).click
+    find(:xpath, ta('stageCom:mainPage:subcategory:baby', "(//a[text()='Baby'])[1]")).click
+    #-----find(:xpath, "(//a[text()='Baby'])[1]").click
+    #-----find(:xpath, ta('stageCom:mainPage:subcategory:baby')).click
+sleep 10
+
 
     #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
+    find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
     #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl')).click
+    #find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl')).click
 
     #select subcategory
     find(:xpath, ta('stageCom:productPage:girlDress', "//h2[text()='Dresses']")).click
@@ -91,6 +94,25 @@ feature 'TrueAutomation.IO capybara example' do
     find(:xpath, ta('stageCom:productPage:addToWishList', "//button[@class='wishlist-button']")).click
     #find(:xpath, "//button[@class='wishlist-button']").click
     #find(:xpath, ta('stageCom:productPage:addToWishList')).click
+
+#click on logo img
+#find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
+#find(:xpath, "//span[@class='modalClose modal-close']").click
+find(:xpath, ta('stageCom:mainPage:logo')).click
+
+#click on sandwich menu
+#find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
+#find(:xpath, "//button[@id='nav-button']").click
+find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
+
+#open wishlist
+find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist', "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']")).click
+#find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click
+#find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist')).click
+
+find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist:addToBag',"//a[@class='wishlist-item__action__button-primary wishForm']")).click
+#find(:xpath, "//a[@class='wishlist-item__action__button-primary wishForm']").click
+#find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist:addToBag')).click
 
     sleep 5
   end

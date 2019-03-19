@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'Stage.com - Add item to wishlist' do
+  scenario 'Stage.com - add item to cart' do
     caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
     caps_chrome['chromeOptions'] = {'mobileEmulation' => {
       'deviceMetrics' => { 'width' => 360, 'height' => 640, 'pixelRatio' => 3.0 },
@@ -10,23 +10,28 @@ feature 'TrueAutomation.IO capybara example' do
     caps_chrome['chromeOptions']['args'] = ['--disable-notifications']
     Capybara.register_driver :true_automation_driver do |app|
       TrueAutomation::Driver::Capybara.new(app, desired_capabilities: caps_chrome)
+
     end
 
     visit 'https://www.stage.com/'
 
     sleep 2
+    #go to stage site and click to close modal
+    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    #find(:xpath, "//span[@class='modalClose modal-close']").click
+    #find(:xpath, ta('stageCom:mainPage:modalClose')).click
 
     #go to stage site and click to close modal
     #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
     find(:xpath, ta('stageCom:mainPage:modalClose')).click
 
+    # logIn
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
     find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
 
-##  login in account
     #click to sign in in top of page
     #find(:xpath, ta('stageCom:mainPage:singIn', "//p[@class='m-menu__account__links']/a[text()='Sign in']")).click
     #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
@@ -46,51 +51,16 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, ta('stageCom:loginPage:signIn', "//input[@value='sign in']")).click
     #find(:xpath, "//input[@value='sign in']").click
     find(:xpath, ta('stageCom:loginPage:signIn')).click
-##
+
     #click on logo img
     #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
     find(:xpath, ta('stageCom:mainPage:logo')).click
 
-    #click on sandwich menu
-    #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
-    #find(:xpath, "//button[@id='nav-button']").click
-    find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
-
-    #select category
-    #find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
-    #find(:xpath, "//ul/a[@data-menu-id='Kids']").click
-    find(:xpath, ta('stageCom:mainPage:categoryKids')).click
-
-    #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategor:baby', "(//a[text()='Baby'])[1]")).click
-    #find(:xpath, "(//a[text()='Baby'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:baby')).click
-
-    #select subcategory
-    #find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
-    #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl')).click
-
-    #select subcategory
-    find(:xpath, ta('stageCom:productPage:girlDress', "//h2[text()='Dresses']")).click
-    #find(:xpath, "//h2[text()='Dresses']").click
-    #find(:xpath, ta('stageCom:productPage:girlDress')).click
-
-    #select first product on page
-    find(:xpath, ta('stageCom:productPage:girlDress:pinkDress', "//a[@class='product-image'][1]")).click
-    #find(:xpath, "//a[@class='product-image'][1]").click
-    #find(:xpath, ta('stageCom:productPage:girlDress:pinkDress')).click
-
-    #select product size
-    find(:xpath, ta('stageCom:productPage:babySize', "//a[@data-size-id='7000489']")).click
-    #find(:xpath, "//a[@data-size-id='7000489']").click
-    #find(:xpath, ta('stageCom:productPage:babySize')).click
-
-    #add to wish list
-    find(:xpath, ta('stageCom:productPage:addToWishList', "//button[@class='wishlist-button']")).click
-    #find(:xpath, "//button[@class='wishlist-button']").click
-    #find(:xpath, ta('stageCom:productPage:addToWishList')).click
+    #open minicart
+    find(:xpath, ta('stageCom:mainPage:minicart', "//a[@class='m-header__minicart m-header__miniCartInnerContent']")).click
+    #find(:xpath, "//a[@class='m-header__minicart m-header__miniCartInnerContent']").click
+    #find(:xpath, ta('stageCom:mainPage:minicart')).click
 
     sleep 5
   end
