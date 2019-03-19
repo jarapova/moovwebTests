@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'Annie Selke - Create account' do
+  scenario 'Annie Selke - edit account' do
     visit 'https://annieselke.com/'
 
     sleep 10
