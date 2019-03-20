@@ -7,12 +7,12 @@
   User is able to reach Account page from hamburger menu====================Done
   Navigate to PDP from "Press" catalog======================================Done
   Navigate to PDP from "Collections" page===================================Done
-  Navigate to PDP from "No Results" page========================================
-  Navigate to PDP from search results===========================================
-  Navigate to PDP from product suggestions (Complete the look)==================
-  Navigate to PDP from product suggestions (Related products)===================
-  Navigate to PDP from  "Ideas, Inspirations" page==============================
-  Navigate to "Catalogs" page===================================================
+  Navigate to PDP from "No Results" page====================================Done
+  Navigate to PDP from search results=======================================Done
+  Navigate to PDP from product suggestions (Complete the look)==============Done
+  Navigate to PDP from product suggestions (Related products)===============Done
+  Navigate to PDP from  "Ideas, Inspirations" page==========================Done
+  Navigate to "Catalogs" page===============================================Done
   Find a store using "Store Finder"=============================================
   Apply filter to see filtered results==========================================
   Click on logo to navigate homepage============================================
@@ -94,7 +94,7 @@
 
 
   # Navigate to PDP from search results
-  Scenario: As user I want to navigate to PDP from "No Results" page
+  Scenario: As user I want to navigate to PDP from search results page
     Given user is on homepage
     When user click on search icon header
     And user enter valid search request
@@ -103,14 +103,14 @@
     Then user navigating to PDP by clicking random product image
 
   # Navigate to PDP from product suggestions (Complete the look)
-  Scenario: As user I want to navigate to PDP from "No Results" page
+  Scenario: As user I want to navigate to PDP from from product suggestions
     Given user is on PDP
     When user is able to see "Complete the look" bar
     And user press on random product image in "Complete the look" bar
    Then user is on PDP
 
 # Navigate to PDP from product suggestions (Related products)
-  Scenario: As user I want to navigate to PDP from "No Results" page
+  Scenario: As user I want to navigate to PDP from from product suggestions
     Given user is on PDP
     When user is able to see "Related products" bar
     And user press on random product image in "Related products" bar
