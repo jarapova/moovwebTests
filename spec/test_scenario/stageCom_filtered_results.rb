@@ -16,6 +16,11 @@ feature 'TrueAutomation.IO capybara example' do
     visit 'https://www.stage.com/b/juniors-clothing-tops/N-wr35dq/'
 
     sleep 2
+    #go to stage site and click to close modal
+    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    #find(:xpath, "//span[@class='modalClose modal-close']").click
+    find(:xpath, ta(   'stageCom:mainPage:modalClose')).click
+    
     #click on filter btn
     #find(:xpath, ta('stageCom:subcategoryPage:filterBtn', "//button[@class='refinements-popup-button']")).click
     #find(:xpath, "//button[@class='refinements-popup-button']").click
