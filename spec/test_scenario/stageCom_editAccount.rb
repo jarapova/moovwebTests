@@ -67,11 +67,6 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//input[@value='Save']").click
     find(:xpath, ta('stageCom:accountPage:saveChanges')).click
 
-    ## if after login you need to close modal, use this:
-    #find(:xpath, ta('stageCom:mainPage:cancelModal', "//button[@class='button button-secondary button-secondary--outline']")).click
-    #find(:xpath, "//button[@class='button button-secondary button-secondary--outline']").click
-    #find(:xpath, ta('stageCom:mainPage:cancelModal')).click
-
     sleep 5
   end
 end
