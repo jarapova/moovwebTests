@@ -16,11 +16,7 @@ feature 'TrueAutomation.IO capybara example' do
     visit 'https://www.stage.com/'
 
     sleep 2
-    #go to stage site and click to close modal
-    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
-    #find(:xpath, ta('stageCom:mainPage:modalClose')).click
-
+   
     #go to stage site and click to close modal
     #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
@@ -54,7 +50,7 @@ feature 'TrueAutomation.IO capybara example' do
 
     #click on logo img
     #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
+    #find(:xpath, "//a[@class='m-header__logo']").click
     find(:xpath, ta('stageCom:mainPage:logo')).click
 
     #open minicart
