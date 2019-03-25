@@ -22,8 +22,8 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, ta('stageCom:mainPage:modalClose')).click
 
     #click on cstegory on main page to navigete to subcategory page
-    #find(:xpath, ta('stageCom:mainPage:womenCategory', "//span[text()='WOMEN']")).click
-    #find(:xpath, "//span[text()='WOMEN']").click
+    #find(:xpath, ta('stageCom:mainPage:womenCategory', "//h2/a[text()='Women']")).click
+    #find(:xpath, "//h2/a[text()='Women']").click
     find(:xpath, ta('stageCom:mainPage:womenCategory')).click
 
     #click on navigate on product page
