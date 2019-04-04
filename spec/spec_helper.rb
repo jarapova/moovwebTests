@@ -25,7 +25,11 @@ Dir[File.join(spec_dir, 'support/**/*.rb')].each {|f| require f}
 
 RSpec.configure do |config|
   Capybara.register_driver :true_automation_driver do |app|
+     # profile = Selenium::WebDriver::Chrome::Profile.new
+      #client = Selenium::WebDriver::Remote::Http::Default.new
+      #client.timeout = 300 # instead of the default 60
     TrueAutomation::Driver::Capybara.new(app)
+    #Capybara::Selenium::Driver.new(app, browser: :chrome)
   end
 
   Capybara.configure do |capybara|

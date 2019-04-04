@@ -17,29 +17,31 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 2
     #go to stage site and click to close modal
+    expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
+    #go to stage site and click to close modal
     #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(:xpath, ta(   'stageCom:mainPage:modalClose')).click
-    
+    find(ta('stageCom:mainPage:modalClose')).click
+
     #click on filter btn
     #find(:xpath, ta('stageCom:subcategoryPage:filterBtn', "//button[@class='refinements-popup-button']")).click
     #find(:xpath, "//button[@class='refinements-popup-button']").click
-    find(:xpath, ta('stageCom:subcategoryPage:filterBtn')).click
+    find(ta('stageCom:subcategoryPage:filterBtn')).click
 
     #select color filter
     #find(:xpath, ta('stageCom:subcategoryPage:filterColor', "//h4[@id='shopByTab-Color']")).click
     #find(:xpath, "//h4[@id='shopByTab-Color']").click
-    find(:xpath, ta('stageCom:subcategoryPage:filterColor')).click
+    find(ta('stageCom:subcategoryPage:filterColor')).click
 
     #select color filter
     #find(:xpath, ta('stageCom:subcategoryPage:blueColor', "//label[@for='checkbox-filter-11222']")).click
     #find(:xpath, "//label[@for='checkbox-filter-11222']").click
-    find(:xpath, ta('stageCom:subcategoryPage:blueColor')).click
+    find(ta('stageCom:subcategoryPage:blueColor')).click
 
     #select color filter
     #find(:xpath, ta('stageCom:subcategoryPage:applyBtn', "//input[@value='Apply']")).click
     #find(:xpath, "//input[@value='Apply']").click
-    find(:xpath, ta('stageCom:subcategoryPage:applyBtn')).click
+    find(ta('stageCom:subcategoryPage:applyBtn')).click
 
     sleep 5
   end

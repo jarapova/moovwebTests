@@ -17,19 +17,21 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 2
     #go to stage site and click to close modal
-    find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
+    #go to stage site and click to close modal
+    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
-    #find(:xpath, ta('stageCom:mainPage:modalClose')).click
+    find(ta('stageCom:mainPage:modalClose')).click
 
     #click on cstegory on main page to navigete to subcategory page
     #find(:xpath, ta('stageCom:mainPage:womenCategory', "//h2/a[text()='Women']")).click
     #find(:xpath, "//h2/a[text()='Women']").click
-    find(:xpath, ta('stageCom:mainPage:womenCategory')).click
+    find(ta('stageCom:mainPage:womenCategory')).click
 
     #click on navigate on product page
     #find(:xpath, ta('stageCom:subcategoryPage:product', "(//a[@class='catalog-item__title'])[4]")).click
     #find(:xpath, "(//a[@class='catalog-item__title'])[4]").click
-    find(:xpath, ta('stageCom:subcategoryPage:product')).click
+    find(ta('stageCom:subcategoryPage:product')).click
 
     sleep 5
   end

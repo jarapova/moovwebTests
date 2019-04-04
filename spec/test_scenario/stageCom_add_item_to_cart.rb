@@ -16,53 +16,53 @@ feature 'TrueAutomation.IO capybara example' do
     visit 'https://www.stage.com/'
 
     sleep 2
-    
+    expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
     #go to stage site and click to close modal
-    find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
-    #find(:xpath, ta('stageCom:mainPage:modalClose')).click
+    find(ta('stageCom:mainPage:modalClose')).click
 
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
-    find(:xpath, ta('stageCom:mainPage:sandwichMenu')).click
+    find(ta('stageCom:mainPage:sandwichMenu')).click
 
     #select category
-    #find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
+    find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
     #find(:xpath, "//ul/a[@data-menu-id='Kids']").click
-    find(:xpath, ta('stageCom:mainPage:categoryKids')).click
+    #find(ta('stageCom:mainPage:categoryKids')).click
 
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategor:baby', "(//a[text()='Baby'])[1]")).click
     #find(:xpath, "(//a[text()='Baby'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:baby')).click
+    find(ta('stageCom:mainPage:subcategory:baby')).click
 
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
     #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
-    find(:xpath, ta('stageCom:mainPage:subcategory:babyGirl')).click
+    find(ta('stageCom:mainPage:subcategory:babyGirl')).click
 
     #select subcategory
     #find(:xpath, ta('stageCom:productPage:girlDress', "//h2[text()='Dresses']")).click
     #find(:xpath, "//h2[text()='Dresses']").click
-    find(:xpath, ta('stageCom:productPage:girlDress')).click
+    find(ta('stageCom:productPage:girlDress')).click
 
     #select first product on page
-    #find(:xpath, ta('stageCom:productPage:girlDress:pinkDress', "//a[@class='product-image'][1]")).click
+    #find(:xpath, ta('stageCom:productPage:girlDress:pinkDress', "(//a[@class='product-image'])[1]")).click
     #find(:xpath, "//a[@class='product-image'][1]").click
-    find(:xpath, ta('stageCom:productPage:girlDress:pinkDress')).click
+    find(ta('stageCom:productPage:girlDress:pinkDress')).click
 
     #select product size
-    #find(:xpath, ta('stageCom:productPage:babySize', "//a[@data-size-id='7000489']")).click
-    #find(:xpath, "//a[@data-size-id='7000489']").click
-    find(:xpath, ta('stageCom:productPage:babySize')).click
+    #find(:xpath, ta('stageCom:productPage:babySize', "(//div[@class='pdp__size']//a[@class='attr-swatch'])[1]")).click
+    #find(:xpath, "(//div[@class='pdp__size']//a[@class='attr-swatch'])[1]").click
+    find(ta('stageCom:productPage:babySize')).click
 
     sleep 2
 
     #add to cart
-    #find(:xpath, ta('stageCom:prodPage:addToCart', "//input[@id='addtobag']")).click
+    find(:xpath, ta('stageCom:prodPage:addToCart', "//input[@id='addtobag']")).click
     #find(:xpath, "//input[@id='addtobag']").click
-    find(:xpath, ta('stageCom:prodPage:addToCart')).click
+    #find(ta('stageCom:prodPage:addToCart')).click
 
     sleep 5
   end
