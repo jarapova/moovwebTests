@@ -13,6 +13,9 @@ feature 'TrueAutomation.IO capybara example' do
       end
 
     visit 'https://annieselke.com/Bedding/Brussels-Quilt/p/Q260'
+    within_frame('fcopt-offer-66236-content') do
+        find(:xpath, "//button[@class='offer-control close']").click
+    end
 
     sleep 1
     productName = "//h6[@class='jss199 jss216 jss197']"
@@ -25,7 +28,7 @@ feature 'TrueAutomation.IO capybara example' do
     #navigating to PDP by clicking related Product image
     #find(:xpath, ta('annieselke:productPage:relatedProduct', "(//a[@class='jss56']/h6)[1]")).click
     #find(:xpath, "(//a[@class='jss56']/h6)[1]").click
-    find(:xpath, ta('annieselke:productPage:relatedProduct')).click
+    find(ta('annieselke:productPage:relatedProduct')).click
 
     productName = "//h6[@class='jss199 jss216 jss197']"
     addToCardBtn = "(//span[text()='Add to Cart'])[1]"

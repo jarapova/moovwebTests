@@ -27,7 +27,5 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, ta('venus:mainPage:gotocheckout', "//iediv[@class='cartItemListFooter']/a")).click
     #find(:xpath, "//iediv[@class='cartItemListFooter']/a").click
     find(:xpath, ta('venus:mainPage:gotocheckout')).click
-
-    sleep 25
   end
 end
