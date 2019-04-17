@@ -1,5 +1,17 @@
 require 'spec_helper'
 
+describe 'Preconditions' do
+
+before (:all) do
+  $caps_chrome['chromeOptions']['mobileEmulation'] = {'deviceName' => 'iPhone X'}
+  # Capybara.current_session.driver.browser.manage.window.resize_to(320,568)
+end
+
+after (:all) do
+  Capybara.current_session.driver.quit
+  # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
+end
+
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - edit account' do
       caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
@@ -14,12 +26,12 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://annieselke.com/'
 
-    sleep 3
+    sleep 4
 
     #click on hamburger menu
-    #find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
+    find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
     #find(:xpath, "//button[@aria-label='Menu']").click
-    find(ta('annieselke:mainPage:hamburgerMenu')).click
+    # find(ta('annieselke:mainPage:hamburgerMenu')).click
 
     #click on login link,  it's on the left top page
     #find(:xpath, ta('annieselke:mainPage:login', "//a[text()='Login']")).click
@@ -41,10 +53,12 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//button[text()='Login']").click
     find(ta('annieselke:loginPage:mobile:loginBtn')).click
 
+    sleep 5
+
     #click on hamburger menu
-    #find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
+    find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
     #find(:xpath, "//button[@aria-label='Menu']").click
-    find(ta('annieselke:mainPage:hamburgerMenu')).click
+    # find(ta('annieselke:mainPage:hamburgerMenu')).click
 
     sleep 4
     #click on My Account to enter
@@ -70,4 +84,5 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 5
   end
+end
 end

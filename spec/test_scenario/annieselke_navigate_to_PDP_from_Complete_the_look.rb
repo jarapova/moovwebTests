@@ -1,4 +1,15 @@
 require 'spec_helper'
+describe 'Preconditions' do
+
+before (:all) do
+  $caps_chrome['chromeOptions']['mobileEmulation'] = {'deviceName' => 'iPhone X'}
+  # Capybara.current_session.driver.browser.manage.window.resize_to(320,568)
+end
+
+after (:all) do
+  Capybara.current_session.driver.quit
+  # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
+end
 
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to PDP from product suggestions (Complete the look)' do
@@ -14,9 +25,9 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://annieselke.com/Bedding/Brussels-Quilt/p/Q260'
 
-    sleep 1
+    sleep 5
 
-    productName = "//h6[@class='jss199 jss216 jss197']"
+    productName = "(//div[@data-page='Product']//h6)[1]"
     addToCardBtn = "(//span[text()='Add to Cart'])[1]"
     completeTheLook = "//h6[text()='Complete the Look']"
 
@@ -35,4 +46,5 @@ feature 'TrueAutomation.IO capybara example' do
     p "Button is present"
     sleep 5
     end
+end
 end

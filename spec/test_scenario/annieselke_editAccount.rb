@@ -28,9 +28,9 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta('annieselke:loginPage:loginBtn')).click
 
     #click on My Account to enter
-    #find(:xpath, (ta'annieselke:loginPage:myAccount', "//li/a[text()='My Account']")).click
+    # find(:xpath, (ta'annieselke:loginPage:myAccountDesktop', "//li/a[text()='My Account']")).click
     #find(:xpath, "//li/a[text()='My Account']").click
-    find(ta('annieselke:loginPage:myAccount')).click
+    find(ta('annieselke:loginPage:myAccountDesktop')).click
 
     #click 'Update personal details' on My Profile
     #find(:xpath, ta('annieselke:loginPage:profileEditDesktop', "(//div[@class='account-tile-links']/ul/li[1])[1]")).click

@@ -23,14 +23,26 @@ Dir[File.join(spec_dir, 'fixtures/**/*.yml')].each {|f|
 $data = OpenStruct.new($data)
 Dir[File.join(spec_dir, 'support/**/*.rb')].each {|f| require f}
 
+# RSpec.configure do |config|
+#
+#   Capybara.register_driver :true_automation_driver do |app|
+#      # profile = Selenium::WebDriver::Chrome::Profile.new
+#       #client = Selenium::WebDriver::Remote::Http::Default.new
+#       #client.timeout = 300 # instead of the default 60
+#     TrueAutomation::Driver::Capybara.new(app)
+#     #Capybara::Selenium::Driver.new(app, browser: :chrome)
+#
+#   end
 RSpec.configure do |config|
+  $caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome
+  $caps_chrome['chromeOptions'] = {}
+  $caps_chrome['chromeOptions']['args'] = ['--disable-notifications']
+
   Capybara.register_driver :true_automation_driver do |app|
-     # profile = Selenium::WebDriver::Chrome::Profile.new
-      #client = Selenium::WebDriver::Remote::Http::Default.new
-      #client.timeout = 300 # instead of the default 60
-    TrueAutomation::Driver::Capybara.new(app)
-    #Capybara::Selenium::Driver.new(app, browser: :chrome)
-  end
+    TrueAutomation::Driver::Capybara.new(app, desired_capabilities: $caps_chrome)
+end
+
+
 
   Capybara.configure do |capybara|
     capybara.run_server = false

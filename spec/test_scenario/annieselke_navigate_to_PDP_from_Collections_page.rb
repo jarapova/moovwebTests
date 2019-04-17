@@ -1,4 +1,15 @@
 require 'spec_helper'
+describe 'Preconditions' do
+
+before (:all) do
+  $caps_chrome['chromeOptions']['mobileEmulation'] = {'deviceName' => 'iPhone X'}
+  # Capybara.current_session.driver.browser.manage.window.resize_to(320,568)
+end
+
+after (:all) do
+  Capybara.current_session.driver.quit
+  # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
+end
 
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to PDP from "Collections" page' do
@@ -14,11 +25,12 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://annieselke.com/'
 
-    sleep 10
+    sleep 15
 
     #go to stage site and click  to close modal
-    within_frame(:xpath, ta('iFrame', "//iframe[@id='fcopt-offer-57579-content']")) do
-      find(:xpath, "//button[@class='offer-control close']").click
+    within_frame(0) do
+         # expect(page).to have_selector(:xpath, "//button[@class='offer-control close']", visible:true)
+        find(:xpath, ta('annieselke:mainPage:modalSelectorCloseMobile', "//button[@class='offer-control close']")).click
     end
 
     # click on hamburger menu
@@ -53,4 +65,5 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 5
   end
+end
 end

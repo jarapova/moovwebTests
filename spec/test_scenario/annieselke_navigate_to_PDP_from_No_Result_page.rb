@@ -1,4 +1,15 @@
 require 'spec_helper'
+describe 'Preconditions' do
+
+before (:all) do
+  $caps_chrome['chromeOptions']['mobileEmulation'] = {'deviceName' => 'iPhone X'}
+  # Capybara.current_session.driver.browser.manage.window.resize_to(320,568)
+end
+
+after (:all) do
+  Capybara.current_session.driver.quit
+  # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
+end
 
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to PDP from "No Results" page' do
@@ -43,4 +54,5 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 5
   end
+end
 end

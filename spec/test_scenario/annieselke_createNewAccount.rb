@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Create account' do
     visit 'https://annieselke.com/'
@@ -14,9 +13,9 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 3
 
-    #find(:xpath, ta('annieselke:mainPage:login', "//a[text()='Login']")).click
+    #find(:xpath, ta('annieselke:mainPage:loginDesktop', "//a[text()='Login']")).click
     #find(:xpath, "гl.header-link-items ").click
-    find(ta('annieselke:mainPage:login')).click
+    find(ta('annieselke:mainPage:loginDesktop')).click
 
     #find(:xpath, ta('annieselke:mainPage:createAccount', "//h3[text()='Create an Account']")).click
     #find(:xpath, "//h3[text()='Create an Account']").click
