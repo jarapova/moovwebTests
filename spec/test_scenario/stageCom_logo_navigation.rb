@@ -14,19 +14,19 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/b/men-clothing-jeans/N-1ug3rz1/'
 
-    sleep 2
+    sleep 10
 
-    #go to stage site and click to close modal
+    # #go to stage site and click to close modal
     expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
-    #go to stage site and click to close modal
-    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(ta('stageCom:mainPage:modalClose')).click
+    # #go to stage site and click to close modal
+    # #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    # #find(:xpath, "//span[@class='modalClose modal-close']").click
+    find(ta(   'stageCom:mainPage:modalClose')).click
 
     #click on logo img
     #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
     #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(ta('stageCom:mainPage:logo')).click
+    find(ta(   'stageCom:mainPage:logo')).click
 
     sleep 5
   end

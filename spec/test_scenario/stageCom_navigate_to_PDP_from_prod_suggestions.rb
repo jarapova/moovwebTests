@@ -14,39 +14,39 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 2
+    sleep 10
 
-    #go to stage site and click to close modal
+    # #go to stage site and click to close modal
     expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
-    #go to stage site and click to close modal
-    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(ta('stageCom:mainPage:modalClose')).click
+    # #go to stage site and click to close modal
+    # #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    # #find(:xpath, "//span[@class='modalClose modal-close']").click
+    find(ta(   'stageCom:mainPage:modalClose')).click
 
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
-    find(ta('stageCom:mainPage:sandwichMenu')).click
+    find(ta(   'stageCom:mainPage:sandwichMenu')).click
 
     #click to select deals
     find(:xpath, ta('stageCom:mainPage:todaysDeals', "//ul/a[1]")).click
     #find(:xpath, "//ul/a[1]").click
-    #find(ta('stageCom:mainPage:todaysDeals')).click
+    #find(ta(   'stageCom:mainPage:todaysDeals')).click
 
     #choose deals
     find(:xpath, ta('stageCom:prodPage:deals', "(//div[@class='shopnow-btn']/div/a)[1]")).click
     #find(:xpath, "(//div[@class='shopnow-btn']/div/a)[1]").click
-    #find(ta('stageCom:prodPage:deals')).click
+    #find(ta(   'stageCom:prodPage:deals')).click
 
     #choose deals category (second^ woomen's clearance)
     #find(:xpath, ta('stageCom:prodPage:dealsCategory', "(//a[@class='product-image'])[2]")).click
     #find(:xpath, "(//a[@class='product-image'])[2]").click
-    find(ta('stageCom:prodPage:dealsCategory')).click
+    find(ta(   'stageCom:prodPage:dealsCategory')).click
 
     #choose deals prodact - Rebecca Malone Women's Basic Knit T-shirt
     #find(:xpath, ta('stageCom:prodPage:dealsProduct', "(//a[@class='catalog-item__title'])[4]")).click
     #find(:xpath, "(//div[@class='catalog-item__price-labels'])[4]").click
-    find(ta('stageCom:prodPage:dealsProduct')).click
+    find(ta(   'stageCom:prodPage:dealsProduct')).click
 
     sleep 15
   end

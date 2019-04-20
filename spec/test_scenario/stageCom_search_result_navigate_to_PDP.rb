@@ -20,29 +20,29 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 2
-    #go to stage site and click to close modal
-    expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
-    #go to stage site and click to close modal
-    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(ta('stageCom:mainPage:modalClose')).click
+    sleep 10
+    # #go to stage site and click to close modal
+     expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
+    # #go to stage site and click to close modal
+    # #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    # #find(:xpath, "//span[@class='modalClose modal-close']").click
+    find(ta(   'stageCom:mainPage:modalClose')).click
 
     #click on search button in top on page
     #find(:xpath, ta('stageCom:mainPage:searchBtn', "//button[@id='m-header-search']")).click
     #find(:xpath, "//button[@id='m-header-search']").click
-    find(ta('stageCom:mainPage:searchBtn')).click
+    find(ta(   'stageCom:mainPage:searchBtn')).click
 
     #enter search query
     #find(:xpath, ta('stageCom:mainPage:searchInput', "//input[@id='m-search-text']")).set('Signature Studio')
     #find(:xpath, "//input[@id='m-search-text']").set('Signature Studio')
-    find(ta('stageCom:mainPage:searchInput')).set('Signature Studio')
+    find(ta(   'stageCom:mainPage:searchInput')).set('Signature Studio')
 
     sleep 1
     #click to see search results
     #find(:xpath, ta('stageCom:mainPage:searchResultItem', "//div[@class='dimResult']/div[@class='link']/a/span[text()='Signature Studio']")).click
     #ind(:xpath, "//div[@class='dimResult']/div[@class='link']/a/span[text()='Signature Studio']").click
-    find(ta('stageCom:mainPage:searchResultItem')).click
+    find(ta(   'stageCom:mainPage:searchResultItem')).click
     sleep 5
   end
 end

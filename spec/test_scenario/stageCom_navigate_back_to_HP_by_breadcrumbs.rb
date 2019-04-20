@@ -15,28 +15,28 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/b/kids-baby-nursery-decor/N-1993scj/'
 
-    sleep 2
-    #go to stage site and click to close modal
+    sleep 10
+    # #go to stage site and click to close modal
     expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
-    #go to stage site and click to close modal
-    #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
-    #find(:xpath, "//span[@class='modalClose modal-close']").click
-    find(ta('stageCom:mainPage:modalClose')).click
+    # #go to stage site and click to close modal
+    # #find(:xpath, ta('stageCom:mainPage:modalClose', "//span[@class='modalClose modal-close']")).click
+    # #find(:xpath, "//span[@class='modalClose modal-close']").click
+    find(ta(   'stageCom:mainPage:modalClose')).click
 
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:subcategoryPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[2]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[2]").click
-    find(ta('stageCom:subcategoryPage:breadcrumbs')).click
+    find(ta(   'stageCom:subcategoryPage:breadcrumbs')).click
 
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:categoryPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[2]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[2]").click
-    find(ta('stageCom:categoryPage:breadcrumbs')).click
+    find(ta(   'stageCom:categoryPage:breadcrumbs')).click
 
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:mainPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[1]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[1]").click
-    find(ta('stageCom:mainPage:breadcrumbs')).click
+    find(ta(   'stageCom:mainPage:breadcrumbs')).click
 
   end
 end
