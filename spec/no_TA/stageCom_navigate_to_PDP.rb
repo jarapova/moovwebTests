@@ -15,20 +15,16 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 5
+    sleep 10
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click
     end
 
     #click on cstegory on main page to navigete to subcategory page
-    find(:xpath, ta('stageCom:mainPage:womenCategory', "//span[text()='WOMEN']")).click
-    #find(:xpath, "//span[text()='WOMEN']").click
-    # find(ta(   'stageCom:mainPage:womenCategory')).click
+    find(:xpath, "//span[text()='WOMEN']").click
 
     #click on navigate on product page
-    #find(:xpath, ta('stageCom:subcategoryPage:product', "(//a[@class='catalog-item__title'])[4]")).click
-    #find(:xpath, "(//a[@class='catalog-item__title'])[4]").click
-    find(ta(   'stageCom:subcategoryPage:product')).click
+    find(:xpath, "(//a[@class='catalog-item__title'])[4]").click
 
     sleep 5
   end

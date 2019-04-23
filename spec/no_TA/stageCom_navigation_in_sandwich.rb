@@ -13,18 +13,34 @@ describe 'Preconditions' do
   feature 'TrueAutomation.IO capybara example' do
     scenario 'Stage.com - navigation to subcategory in hamburger menu' do
 
-      visit 'https://www.stage.com/b/men-clothing-jeans/N-1ug3rz1/'
+      visit 'https://www.stage.com/'
 
-      # #go to stage site and click to close modal
-      sleep 5
+      sleep 10
+
       if page.has_xpath?("//span[@class='modalClose modal-close']")
         find(:xpath, "//span[@class='modalClose modal-close']").click
       end
 
-      #click on logo img
-      #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
-      #find(:xpath, "//a[@class='m-header__logo']").click
-      find(ta(   'stageCom:mainPage:logo')).click
+      # click on sandwich menu
+      find(:xpath, "//button[@id='nav-button']").click
+
+      #select category
+      find(:xpath, "//ul/a[@data-menu-id='Men']").click
+
+      #select subcategory
+      find(:xpath, "//a[text()='Shop All Men']").click
+
+      #click on sandwich menu
+      find(:xpath, "//button[@id='nav-button']").click
+
+      #select category
+      find(:xpath, "//ul/a[@data-menu-id='Kids']").click
+
+      #select subcategory
+      find(:xpath, "(//a[text()='Baby'])[1]").click
+
+      #select subcategory
+      find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
 
       sleep 5
     end

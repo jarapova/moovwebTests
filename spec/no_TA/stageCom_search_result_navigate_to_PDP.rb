@@ -1,3 +1,8 @@
+#Don't work, cause it's looks like baug
+
+
+
+
 require 'spec_helper'
 describe 'Preconditions' do
 
@@ -15,26 +20,19 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://www.stage.com/'
 
-    sleep 5
+    sleep 10
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click
     end
-
     #click on search button in top on page
-    #find(:xpath, ta('stageCom:mainPage:searchBtn', "//button[@id='m-header-search']")).click
-    #find(:xpath, "//button[@id='m-header-search']").click
-    find( ta(   'stageCom:mainPage:searchBtn')).click
+    find(:xpath, "//button[@id='m-header-search']").click
 
     #enter search query
-    #find(:xpath, ta('stageCom:mainPage:searchInput', "//input[@id='m-search-text']")).set('t-shirt')
-    #find(:xpath, "//input[@id='m-search-text']").set('t-shirt')
-    find(ta(   'stageCom:mainPage:searchInput')).set('t-shirt')
+    find(:xpath, "//input[@id='m-search-text']").set('Signature Studio')
 
+    sleep 1
     #click to see search results
-    #find(:xpath, ta('stageCom:mainPage:searchTerm', "//button[@class='site-search__button icon icon--search-field-default']")).click
-    #find(:xpath, "//button[@class='site-search__button icon icon--search-field-default']").click
-    find(ta(   'stageCom:mainPage:searchTerm')).click
-
+    find(:xpath, "//a/span[text()='Signature Studio']").click
     sleep 5
   end
 end

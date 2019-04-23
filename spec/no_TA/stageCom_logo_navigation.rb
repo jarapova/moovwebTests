@@ -15,16 +15,18 @@ describe 'Preconditions' do
 
       visit 'https://www.stage.com/b/men-clothing-jeans/N-1ug3rz1/'
 
-      # #go to stage site and click to close modal
-      sleep 5
-      if page.has_xpath?("//span[@class='modalClose modal-close']")
-        find(:xpath, "//span[@class='modalClose modal-close']").click
-      end
+      sleep 10
+
+        if page.has_xpath?("//span[@class='modalClose modal-close']")
+          find(:xpath, "//span[@class='modalClose modal-close']").click
+        end
+      # # #go to stage site and click to close modal
+      # expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
+      # # #go to stage site and click to close modal
+      # find(:xpath, "//span[@class='modalClose modal-close']").click
 
       #click on logo img
-      #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
-      #find(:xpath, "//a[@class='m-header__logo']").click
-      find(ta(   'stageCom:mainPage:logo')).click
+      find(:xpath, "//a[@class='m-header__logo']").click
 
       sleep 5
     end
