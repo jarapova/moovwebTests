@@ -16,10 +16,9 @@ feature 'TrueAutomation.IO capybara example' do
 
     sleep 10
 
-    # #go to stage site and click to close modal
-    expect(page).to have_selector(:xpath, "//span[@class='modalClose modal-close']", visible:true)
-    # # #go to stage site and click to close modal
-    find(:xpath, "//span[@class='modalClose modal-close']").click
+   if page.has_xpath?("//span[@class='modalClose modal-close']")
+     find(:xpath, "//span[@class='modalClose modal-close']").click
+   end
 
     #click on sandwich menu
     find(:xpath, "//button[@id='nav-button']").click
@@ -27,8 +26,10 @@ feature 'TrueAutomation.IO capybara example' do
     #click to sign up in top of page
     find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
 
-    # #close modal2
-    find(:xpath, "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']").click
+    # close modal2
+   if page.has_xpath?("//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")
+     find(:xpath, "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']").click
+   end
 
     #click on logo img
     find(:xpath, "//p[@class='footer__title-text']/a").click

@@ -16,7 +16,7 @@ describe 'Preconditions' do
 
       visit 'https://www.stage.com/'
 
-      sleep 5
+      sleep 10
       if page.has_xpath?("//span[@class='modalClose modal-close']")
         find(:xpath, "//span[@class='modalClose modal-close']").click
       end
@@ -26,6 +26,7 @@ describe 'Preconditions' do
       #click to sign in in top of page
       find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
       #enter email
+      sleep 3
       find(:xpath, "//input[@id='email']").set('julia.arapova@softesis.com')
       #enter password
       find(:xpath, "//input[@id='password']").set('1234tesT')

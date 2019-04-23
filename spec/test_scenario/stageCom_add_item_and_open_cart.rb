@@ -31,6 +31,7 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
     find(ta(   'stageCom:mainPage:singIn')).click
 
+    sleep 3
 
     #enter email
     #find(:xpath, ta('stageCom:loginPage:accountEmail', "//input[@id='email']")).set('julia.arapova@softesis.com')

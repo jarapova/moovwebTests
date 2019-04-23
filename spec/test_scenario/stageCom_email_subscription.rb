@@ -30,10 +30,10 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
     find(ta(   'stageCom:mainPage:singUp')).click
 
-    # #close modal2
-    # find(:xpath, ta('stageCom:loginPage:modal2', "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")).click
-    # #find(:xpath, "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']").click
-    # # find(ta(   'stageCom:loginPage:modal2')).click
+    # close modal2
+   if page.has_xpath?("//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")
+     find(:xpath, "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']").click
+   end
 
     #click on logo img
     #find(:xpath, ta('stageCom:mainPage:subscriptionLink', "//p[@class='footer__title-text']/a")).click

@@ -28,13 +28,13 @@ describe 'Preconditions' do
       find(:xpath, "//ul/a[1]").click
 
       #choose deals
-      find(:xpath, "(//div[@class='shopnow-btn']/div/a)[1]").click
+      find(:xpath, "(//div[@class='shopnow-btn']/div/a)[2]").click
 
       #choose deals category (second^ woomen's clearance)
       find(:xpath, "(//a[@class='product-image'])[2]").click
 
-      #choose deals prodact - Rebecca Malone Women's Basic Knit T-shirt
-      find(:xpath, "(//div[@class='catalog-item__price-labels'])[4]").click
+      # #choose deals prodact - Rebecca Malone Women's Basic Knit T-shirt
+      # find(:xpath, "(//div[@class='catalog-item__price-labels'])[4]").click
 
       sleep 15
     end

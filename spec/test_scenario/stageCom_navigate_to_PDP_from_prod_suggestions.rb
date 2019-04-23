@@ -31,7 +31,7 @@ describe 'Preconditions' do
       #find(ta(   'stageCom:mainPage:todaysDeals')).click
 
       #choose deals
-      find(:xpath, ta('stageCom:prodPage:deals', "(//div[@class='shopnow-btn']/div/a)[1]")).click
+      find(:xpath, ta('stageCom:prodPage:deals', "(//div[@class='shopnow-btn']/div/a)[2]")).click
       #find(:xpath, "(//div[@class='shopnow-btn']/div/a)[1]").click
       #find(ta(   'stageCom:prodPage:deals')).click
 
@@ -39,11 +39,6 @@ describe 'Preconditions' do
       #find(:xpath, ta('stageCom:prodPage:dealsCategory', "(//a[@class='product-image'])[2]")).click
       #find(:xpath, "(//a[@class='product-image'])[2]").click
       find(ta(   'stageCom:prodPage:dealsCategory')).click
-
-      #choose deals prodact - Rebecca Malone Women's Basic Knit T-shirt
-      #find(:xpath, ta('stageCom:prodPage:dealsProduct', "(//a[@class='catalog-item__title'])[4]")).click
-      #find(:xpath, "(//div[@class='catalog-item__price-labels'])[4]").click
-      find(ta(   'stageCom:prodPage:dealsProduct')).click
 
       sleep 15
     end

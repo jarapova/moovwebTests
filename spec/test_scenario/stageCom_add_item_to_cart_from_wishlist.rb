@@ -107,6 +107,8 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//button[@id='nav-button']").click
     find(ta(   'stageCom:mainPage:sandwichMenu')).click
 
+    sleep 5
+
     #open wishlist
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist', "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']")).click
     #find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click

@@ -72,6 +72,7 @@ feature 'TrueAutomation.IO capybara example' do
 
     #click on sandwich menu
     find(:xpath, "//button[@id='nav-button']").click
+    sleep 5
 
     #open wishlist
     find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click
