@@ -25,6 +25,7 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//button[@id='m-header-search']").click
     find( ta(   'stageCom:mainPage:searchBtn')).click
 
+    sleep 5
     #enter search query
     #find(:xpath, ta('stageCom:mainPage:searchInput', "//input[@id='m-search-text']")).set('t-shirt')
     #find(:xpath, "//input[@id='m-search-text']").set('t-shirt')

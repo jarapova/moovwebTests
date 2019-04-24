@@ -92,8 +92,14 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "(//div[@class='pdp__size']//a[@class='attr-swatch'])[1]").click
     find(ta(   'stageCom:productPage:babySize')).click
 
+    sleep 4
+
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
+
     #add to wish list
-    find(:xpath, ta('stageCom:productPage:addToWishList', "//button[text()='Add to Wishlist']")).click
+    find(:xpath, ta('stageCom:productPage:addToWishList', "//button[@class='wishlist-button']")).click
     #find(:xpath, "//button[@class='wishlist-button']").click
     #find(ta(   'stageCom:productPage:addToWishList')).click
 
@@ -108,15 +114,22 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta(   'stageCom:mainPage:sandwichMenu')).click
 
     sleep 5
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
 
     #open wishlist
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist', "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']")).click
     #find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click
     find(ta(   'stageCom:mainPage:sandwichMenu:wishlist')).click
 
-    #find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist:addToBag',"(//a[text()='Add to Bag'])[1]")).click
-    #find(:xpath, "(//a[text()='Add to Bag'])[1]").click
-    find(ta(   'stageCom:mainPage:sandwichMenu:wishlist:addToBag')).click
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
+
+    # find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist:addAllToBag',"//input[@class='button button-primary']")).click
+    #find(:xpath, "//input[@class='button button-primary']").click
+    find(ta(   'stageCom:mainPage:sandwichMenu:wishlist:addAllToBag')).click
 
     sleep 5
   end

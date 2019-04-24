@@ -62,6 +62,10 @@ describe 'Preconditions' do
       #find(:xpath, "//button[@id='nav-button']").click
       find(ta(   'stageCom:mainPage:sandwichMenu')).click
 
+      if page.has_xpath?("//div[@class='acsCloseButton--container']")
+        find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+      end
+
       #open wishlist
       #find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist', "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']")).click
       #find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click

@@ -25,6 +25,11 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//button[@id='nav-button']").click
     find(ta(   'stageCom:mainPage:sandwichMenu')).click
 
+
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
+
     #select category
     #find(:xpath, ta('stageCom:mainPage:categoryMen', "//ul/a[@data-menu-id='Men']")).click
     #find(:xpath, "//ul/a[@data-menu-id='Men']").click
@@ -50,6 +55,10 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "(//a[text()='Baby'])[1]").click
     find(ta(   'stageCom:mainPage:subcategoryBaby')).click
 
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
+    
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategoryBabyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
     #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click

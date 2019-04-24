@@ -39,6 +39,10 @@ describe 'Preconditions' do
         #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
         find(ta(   'stageCom:mainPage:subcategory:babyGirl')).click
 
+        if page.has_xpath?("//span[@class='modalClose modal-close']")
+          find(:xpath, "//span[@class='modalClose modal-close']").click
+        end
+
         sleep 2
         #select subcategory
         #find(:xpath, ta('stageCom:productPage:girlDress', "//h2[text()='Dresses']")).click
@@ -54,6 +58,10 @@ describe 'Preconditions' do
         find(:xpath, ta('stageCom:productPage:babySize', "(//div[@class='pdp__size']//a[@class='attr-swatch'])[1]")).click
         #find(:xpath, "(//div[@class='pdp__size']//a[@class='attr-swatch'])[1]").click
         # find(ta(   'stageCom:productPage:babySize')).click
+
+        if page.has_xpath?("//div[@class='acsCloseButton--container']")
+          find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+        end
 
         sleep 2
 
@@ -83,6 +91,10 @@ describe 'Preconditions' do
         #find(:xpath, ta('stageCom:loginPage:accountPassword', "//input[@id='password']")).set('1234tesT')
         #find(:xpath, "//input[@id='password']").set('1234tesT')
         find(ta(   'stageCom:loginPage:accountPassword')).set('1234tesT')
+
+        if page.has_xpath?("//span[@class='modalClose modal-close']")
+          find(:xpath, "//span[@class='modalClose modal-close']").click
+        end
 
         #click on signIn&Checkout
         #find(:xpath, ta('stageCom:cartPage:signInCheckout', "(//input[@class='button button-secondary'])[1]")).click
@@ -125,6 +137,10 @@ describe 'Preconditions' do
         #find(:xpath, ta('stageCom:checkoutPage:city', "//input[@id='city']")).set('New York')
         #find(:xpath, "//input[@id='city']").set('New York')
         find(ta(   'stageCom:checkoutPage:city')).set('New York')
+
+        if page.has_xpath?("//span[@class='modalClose modal-close']")
+          find(:xpath, "//span[@class='modalClose modal-close']").click
+        end
 
         #enter state
         #find(:xpath, ta('stageCom:checkoutPage:state', "//select[@id='state']")).select('NY')

@@ -34,6 +34,9 @@ describe 'Preconditions' do
       find(ta(   'stageCom:subcategoryPage:filterColor')).click
       sleep 3
 
+      if page.has_xpath?("//div[@class='acsCloseButton--container']")
+        find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+      end
       #select color filter
       #find(:xpath, ta('stageCom:subcategoryPage:blueColor', "//label[@for='checkbox-filter-11222']")).click
       #find(:xpath, "//label[@for='checkbox-filter-11222']").click

@@ -95,6 +95,10 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//a[@data-size-id='7000489']").click
     find(ta(   'stageCom:productPage:babySize')).click
 
+    if page.has_xpath?("//div[@class='acsCloseButton--container']")
+      find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
+    end
+
     #add to wish list
     # find(:xpath, ta('stageCom:productPage:addToWishList', "//button[@class='wishlist-button']")).click
     #find(:xpath, "//button[@class='wishlist-button']").click
