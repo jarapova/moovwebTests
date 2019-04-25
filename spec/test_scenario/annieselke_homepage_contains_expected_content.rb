@@ -25,7 +25,7 @@ feature 'TrueAutomation.IO capybara example' do
 
     visit 'https://annieselke.com/'
 
-    carusel = "(//div[@class='jss131 jss129'])[1]"
+    carusel = "(//span[@class='moov-mobile-hp position-1'])[1]"
     rugs = "//span[text()='Rugs']"
 
 #    When(/^user selects “My account” icon in header$/) do
