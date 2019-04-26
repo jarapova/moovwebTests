@@ -32,7 +32,7 @@ feature 'TrueAutomation.IO capybara example' do
     #navigating to PDP by clicking related Product image
     #find(:xpath, ta('annieselke:productPage:relatedProduct', "(//a[@class='jss56']/h6)[1]")).click
     #find(:xpath, "(//a[@class='jss56']/h6)[1]").click
-    find(ta(   'annieselke:productPage:relatedProduct')).click
+    find(ta('annieselke:productPage:relatedProduct')).click
 
     p "I am expect to see product name on top of page"
     expect(page).to have_selector(:xpath, productName)

@@ -28,23 +28,23 @@ feature 'TrueAutomation.IO capybara example' do
     #click on hamburger menu
     #find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
     #find(:xpath, "//button[@aria-label='Menu']").click
-    find(ta(   'annieselke:mainPage:hamburgerMenu')).click
+    find(ta('annieselke:mainPage:hamburgerMenu')).click
 
     #click on "Ideas, Inspirations" link in the bottom of Hamburher menu
     #find(:xpath, ta('annieselke:mainPage:ideasInspirations', "//a[text()='ideas and inspirations']")).click
     #find(:xpath, "//a[text()='ideas and inspirations']").click
-    find(ta(   'annieselke:mainPage:ideasInspirations')).click
+    find(ta('annieselke:mainPage:ideasInspirations')).click
 
     #click on random gallery category
     #find(:xpath, ta('annieselke:ideasInspirationPage:galleryCategory', "//div[@data-gtm-id='IdeasandInspiration'][6]")).click
     #find(:xpath, "//div[@data-gtm-id='IdeasandInspiration'][6]").click
-    find(ta(   'annieselke:ideasInspirationPage:galleryCategory')).click
+    find(ta('annieselke:ideasInspirationPage:galleryCategory')).click
 
     sleep 3
     #click on random gallery subcategory
     #find(:xpath, ta('annieselke:ideasInspirationPage:gallerySubcategory', "//div[@class='catalog-item'][2]")).click
     #find(:xpath, "//div[@class='catalog-item'][2]").click
-    find(ta(   'annieselke:ideasInspirationPage:gallerySubcategory')).click
+    find(ta('annieselke:ideasInspirationPage:gallerySubcategory')).click
 
     p "I am expect to see slider"
     expect(page).to have_selector(:xpath, slider)
@@ -53,12 +53,12 @@ feature 'TrueAutomation.IO capybara example' do
     #navigating to slider by clicking on
     #find(:xpath, ta('annieselke:ideasInspirationPage:slider', "//div[@id='slider']")).click
     #find(:xpath, "//div[@id='slider']").click
-    find(ta(   'annieselke:ideasInspirationPage:slider')).click
+    find(ta('annieselke:ideasInspirationPage:slider')).click
 
     #navigating to PDP by clicking
     #find(:xpath, ta('annieselke:ideasInspirationPage:product', "(//li/div[@class='content'])[1]")).click
     #find(:xpath, "(//li/div[@class='content'])[1]").click
-    find(ta(   'annieselke:ideasInspirationPage:product')).click
+    find(ta('annieselke:ideasInspirationPage:product')).click
 
     p "I am expect to see product name"
     expect(page).to have_selector(:xpath, productName)

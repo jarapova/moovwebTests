@@ -16,6 +16,12 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - edit account' do
     visit 'https://annieselke.com/'
 
+    #click to close modal
+    sleep 5
+    within_frame(0) do
+        page.execute_script("document.querySelector('button.close').click()")
+    end
+
     #click on hamburger menu
     sleep 5
     find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
