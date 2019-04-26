@@ -22,7 +22,7 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//input[@id='j_password']").set('1234tesT')
     find(ta('annieselke:loginPage:pass')).set('1234tesT')
 
-    sleep 3
+    sleep 5
     #click on login btn
     #find(:xpath, ta('annieselke:loginPage:loginBtn', "//button[text()='Login']")).click
     #find(:xpath, "//button[text()='Login']").click

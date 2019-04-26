@@ -23,7 +23,7 @@ feature 'TrueAutomation.IO capybara example' do
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
-    find(ta(   'stageCom:mainPage:sandwichMenu')).click
+    find(ta('stageCom:mainPage:sandwichMenu')).click
 
 
     if page.has_xpath?("//div[@class='acsCloseButton--container']")
@@ -33,36 +33,36 @@ feature 'TrueAutomation.IO capybara example' do
     #select category
     #find(:xpath, ta('stageCom:mainPage:categoryMen', "//ul/a[@data-menu-id='Men']")).click
     #find(:xpath, "//ul/a[@data-menu-id='Men']").click
-    find(ta(   'stageCom:mainPage:categoryMen')).click
+    find(ta('stageCom:mainPage:categoryMen')).click
 
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategoryAllMen', "//a[text()='Shop All Men']")).click
     #find(:xpath, "//a[text()='Shop All Men']").click
-    find(ta(   'stageCom:mainPage:subcategoryAllMen')).click
+    find(ta('stageCom:mainPage:subcategoryAllMen')).click
 
     #click on sandwich menu
     #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
     #find(:xpath, "//button[@id='nav-button']").click
-    find(ta(   'stageCom:mainPage:sandwichMenu')).click
+    find(ta('stageCom:mainPage:sandwichMenu')).click
 
     #select category
     #find(:xpath, ta('stageCom:mainPage:categoryKids', "//ul/a[@data-menu-id='Kids']")).click
     #find(:xpath, "//ul/a[@data-menu-id='Kids']").click
-    find(ta(   'stageCom:mainPage:categoryKids')).click
+    find(ta('stageCom:mainPage:categoryKids')).click
 
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategoryBaby', "(//a[text()='Baby'])[1]")).click
     #find(:xpath, "(//a[text()='Baby'])[1]").click
-    find(ta(   'stageCom:mainPage:subcategoryBaby')).click
+    find(ta('stageCom:mainPage:subcategoryBaby')).click
 
     if page.has_xpath?("//div[@class='acsCloseButton--container']")
       find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
     end
-    
+
     #select subcategory
     #find(:xpath, ta('stageCom:mainPage:subcategoryBabyGirl', "(//a[text()='Baby Girl (0-24 months)'])[1]")).click
     #find(:xpath, "(//a[text()='Baby Girl (0-24 months)'])[1]").click
-    find(ta(   'stageCom:mainPage:subcategoryBabyGirl')).click
+    find(ta('stageCom:mainPage:subcategoryBabyGirl')).click
 
     sleep 5
   end

@@ -24,7 +24,7 @@ describe 'Preconditions' do
       #click on logo img
       #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
       #find(:xpath, "//a[@class='m-header__logo']").click
-      find(ta(   'stageCom:mainPage:logo')).click
+      find(ta('stageCom:mainPage:logo')).click
 
       sleep 5
     end

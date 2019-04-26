@@ -23,22 +23,22 @@ describe 'Preconditions' do
       #click on sandwich menu
       #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
       #find(:xpath, "//button[@id='nav-button']").click
-      find(ta(   'stageCom:mainPage:sandwichMenu')).click
+      find(ta('stageCom:mainPage:sandwichMenu')).click
 
       #click to select deals
       find(:xpath, ta('stageCom:mainPage:todaysDeals', "//ul/a[1]")).click
       #find(:xpath, "//ul/a[1]").click
-      #find(ta(   'stageCom:mainPage:todaysDeals')).click
+      #find(ta('stageCom:mainPage:todaysDeals')).click
 
       #choose deals
       find(:xpath, ta('stageCom:prodPage:deals', "(//div[@class='shopnow-btn']/div/a)[2]")).click
       #find(:xpath, "(//div[@class='shopnow-btn']/div/a)[1]").click
-      #find(ta(   'stageCom:prodPage:deals')).click
+      #find(ta('stageCom:prodPage:deals')).click
 
       #choose deals category (second^ woomen's clearance)
       #find(:xpath, ta('stageCom:prodPage:dealsCategory', "(//a[@class='product-image'])[2]")).click
       #find(:xpath, "(//a[@class='product-image'])[2]").click
-      find(ta(   'stageCom:prodPage:dealsCategory')).click
+      find(ta('stageCom:prodPage:dealsCategory')).click
 
       sleep 15
     end
