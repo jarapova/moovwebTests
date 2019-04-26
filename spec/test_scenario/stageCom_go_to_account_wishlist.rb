@@ -24,28 +24,28 @@ describe 'Preconditions' do
       #click on sandwich menu
       #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
       #find(:xpath, "//button[@id='nav-button']").click
-      find(ta(   'stageCom:mainPage:sandwichMenu')).click
+      find(ta('stageCom:mainPage:sandwichMenu')).click
 
   ##  login in account
       #click to sign in in top of page
       #find(:xpath, ta('stageCom:mainPage:singIn', "//p[@class='m-menu__account__links']/a[text()='Sign in']")).click
       #find(:xpath, "//p[@class='m-menu__account__links']/a[text()='Sign up']").click
-      find(ta(   'stageCom:mainPage:singIn')).click
+      find(ta('stageCom:mainPage:singIn')).click
 
       #enter email
       #find(:xpath, ta('stageCom:loginPage:accountEmail', "//input[@id='email']")).set('julia.arapova@softesis.com')
       #find(:xpath, "//input[@id='email']").set('julia.arapova@softesis.com')
-      find(ta(   'stageCom:loginPage:accountEmail')).set('julia.arapova@softesis.com')
+      find(ta('stageCom:loginPage:accountEmail')).set('julia.arapova@softesis.com')
 
       #enter password
       #find(:xpath, ta('stageCom:loginPage:accountPassword', "//input[@id='password']")).set('1234tesT')
       #find(:xpath, "//input[@id='password']").set('1234tesT')
-      find(ta(   'stageCom:loginPage:accountPassword')).set('1234tesT')
+      find(ta('stageCom:loginPage:accountPassword')).set('1234tesT')
 
       #click Sign In to login
       #find(:xpath, ta('stageCom:loginPage:signIn', "//input[@value='sign in']")).click
       #find(:xpath, "//input[@value='sign in']").click
-      find(ta(   'stageCom:loginPage:signIn')).click
+      find(ta('stageCom:loginPage:signIn')).click
   ##
       # close modal2
       if page.has_xpath?("//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")
@@ -55,12 +55,12 @@ describe 'Preconditions' do
       #click on logo img
       #find(:xpath, ta('stageCom:mainPage:logo', "//a[@class='m-header__logo']")).click
       #find(:xpath, "//a[@class='m-header__logo']").click
-      find(ta(   'stageCom:mainPage:logo')).click
+      find(ta('stageCom:mainPage:logo')).click
 
       #click on sandwich menu
       #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click
       #find(:xpath, "//button[@id='nav-button']").click
-      find(ta(   'stageCom:mainPage:sandwichMenu')).click
+      find(ta('stageCom:mainPage:sandwichMenu')).click
 
       if page.has_xpath?("//div[@class='acsCloseButton--container']")
         find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
@@ -69,7 +69,7 @@ describe 'Preconditions' do
       #open wishlist
       #find(:xpath, ta('stageCom:mainPage:sandwichMenu:wishlist', "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']")).click
       #find(:xpath, "//ul[@class='utility-nav']/li/a[@class='utility-nav__link utility-nav__link--wishlist']").click
-      find(ta(   'stageCom:mainPage:sandwichMenu:wishlist')).click
+      find(ta('stageCom:mainPage:sandwichMenu:wishlist')).click
 
       sleep 5
     end

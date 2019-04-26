@@ -25,13 +25,13 @@ describe 'Preconditions' do
       #click on filter btn
       #find(:xpath, ta('stageCom:subcategoryPage:filterBtn', "//button[@class='refinements-popup-button']")).click
       #find(:xpath, "//button[@class='refinements-popup-button']").click
-      find(ta(   'stageCom:subcategoryPage:filterBtn')).click
+      find(ta('stageCom:subcategoryPage:filterBtn')).click
       sleep 3
 
       #select color filter
       #find(:xpath, ta('stageCom:subcategoryPage:filterColor', "//h4[@id='shopByTab-Color']")).click
       #find(:xpath, "//h4[@id='shopByTab-Color']").click
-      find(ta(   'stageCom:subcategoryPage:filterColor')).click
+      find(ta('stageCom:subcategoryPage:filterColor')).click
       sleep 3
 
       if page.has_xpath?("//div[@class='acsCloseButton--container']")
@@ -40,12 +40,12 @@ describe 'Preconditions' do
       #select color filter
       #find(:xpath, ta('stageCom:subcategoryPage:blueColor', "//label[@for='checkbox-filter-11222']")).click
       #find(:xpath, "//label[@for='checkbox-filter-11222']").click
-      find(ta(   'stageCom:subcategoryPage:blueColor')).click
+      find(ta('stageCom:subcategoryPage:blueColor')).click
 
       #select color filter
       #find(:xpath, ta('stageCom:subcategoryPage:applyBtn', "//input[@value='Apply']")).click
       #find(:xpath, "//input[@value='Apply']").click
-      find(ta(   'stageCom:subcategoryPage:applyBtn')).click
+      find(ta('stageCom:subcategoryPage:applyBtn')).click
 
       sleep 5
     end

@@ -3,7 +3,7 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Create account' do
     visit 'https://annieselke.com/'
 
-    sleep 10
+    sleep 2
     #go to stage site and click  to close modal
     within_frame('fcopt-offer-66236-content') do
         #find(:xpath, "//button[@class='offer-control close']").click

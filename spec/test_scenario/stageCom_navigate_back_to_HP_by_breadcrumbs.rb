@@ -24,17 +24,17 @@ feature 'TrueAutomation.IO capybara example' do
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:subcategoryPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[2]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[2]").click
-    find(ta(   'stageCom:subcategoryPage:breadcrumbs')).click
+    find(ta('stageCom:subcategoryPage:breadcrumbs')).click
 
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:categoryPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[2]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[2]").click
-    find(ta(   'stageCom:categoryPage:breadcrumbs')).click
+    find(ta('stageCom:categoryPage:breadcrumbs')).click
 
     #click to navigate by breadcrumps
     #find(:xpath, ta('stageCom:mainPage:breadcrumbs', "(//a[@class='breadcrumbs__link'])[1]")).click
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[1]").click
-    find(ta(   'stageCom:mainPage:breadcrumbs')).click
+    find(ta('stageCom:mainPage:breadcrumbs')).click
 
   end
 end

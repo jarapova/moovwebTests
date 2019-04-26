@@ -28,18 +28,18 @@ feature 'TrueAutomation.IO capybara example' do
     #click on search button in top on page
     #find(:xpath, ta('stageCom:mainPage:searchBtn', "//button[@id='m-header-search']")).click
     #find(:xpath, "//button[@id='m-header-search']").click
-    find(ta(   'stageCom:mainPage:searchBtn')).click
+    find(ta('stageCom:mainPage:searchBtn')).click
 
     #enter search query
     #find(:xpath, ta('stageCom:mainPage:searchInput', "//input[@id='m-search-text']")).set('Signature Studio')
     #find(:xpath, "//input[@id='m-search-text']").set('Signature Studio')
-    find(ta(   'stageCom:mainPage:searchInput')).set('Signature Studio')
+    find(ta('stageCom:mainPage:searchInput')).set('Signature Studio')
 
     sleep 1
     #click to see search results
     #find(:xpath, ta('stageCom:mainPage:searchResultItem', "//div[@class='dimResult']/div[@class='link']/a/span[text()='Signature Studio']")).click
     #ind(:xpath, "//div[@class='dimResult']/div[@class='link']/a/span[text()='Signature Studio']").click
-    find(ta(   'stageCom:mainPage:searchResultItem')).click
+    find(ta('stageCom:mainPage:searchResultItem')).click
     sleep 5
   end
 end
