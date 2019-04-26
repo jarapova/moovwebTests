@@ -15,10 +15,10 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - reaching account page from hamburger menu' do
     visit 'https://annieselke.com/'
 
-    sleep 2
+    #click to close modal
+    sleep 5
     within_frame(0) do
-         # expect(page).to have_selector(:xpath, "//button[@class='offer-control close']", visible:true)
-        find(:xpath, ta('annieselke:mainPage:modalSelectorCloseMobile', "//button[@class='offer-control close']")).click
+        page.execute_script("document.querySelector('button.close').click()")
     end
 
     sleep 3

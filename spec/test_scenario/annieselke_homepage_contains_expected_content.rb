@@ -18,18 +18,13 @@ feature 'TrueAutomation.IO capybara example' do
     carusel = "(//span[@class='moov-mobile-hp position-1'])[1]"
     rugs = "//span[text()='Rugs']"
 
-#    When(/^user selects “My account” icon in header$/) do
       p "I am expect carusel in hesder"
       expect(page).to have_selector(:xpath, carusel)
       p 'I see carusel in header'
       find(:xpath, ta("annieselke:mainPage:rugsButton", rugs)).click
       p "Account icon clicked"
-#  end
-
-
-
 
     sleep 5
+    end
   end
-end
 end

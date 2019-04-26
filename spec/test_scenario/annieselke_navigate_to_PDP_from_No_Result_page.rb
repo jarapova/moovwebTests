@@ -43,6 +43,6 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta(   'annieselke:searchPage:product')).click
 
     sleep 5
+    end
   end
-end
 end

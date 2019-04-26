@@ -14,13 +14,14 @@ end
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to PDP from product suggestions (Related products)' do
     visit 'https://annieselke.com/Bedding/Brussels-Quilt/p/Q260'
-    sleep 2
+
+    #click to close modal
+    sleep 5
     within_frame(0) do
-         # expect(page).to have_selector(:xpath, "//button[@class='offer-control close']", visible:true)
-        find(:xpath, ta('annieselke:mainPage:modalSelectorCloseMobile', "//button[@class='offer-control close']")).click
+        page.execute_script("document.querySelector('button.close').click()")
     end
 
-    sleep 1
+    sleep 3
     productName = "(//div[@data-page='Product']//h6)[1]"
     addToCardBtn = "(//span[text()='Add to Cart'])[1]"
     relatedProducts = "//h6[text()='Related Products']"
@@ -31,7 +32,7 @@ feature 'TrueAutomation.IO capybara example' do
     #navigating to PDP by clicking related Product image
     #find(:xpath, ta('annieselke:productPage:relatedProduct', "(//a[@class='jss56']/h6)[1]")).click
     #find(:xpath, "(//a[@class='jss56']/h6)[1]").click
-    find(ta('annieselke:productPage:relatedProduct')).click
+    find(ta(   'annieselke:productPage:relatedProduct')).click
 
     p "I am expect to see product name on top of page"
     expect(page).to have_selector(:xpath, productName)

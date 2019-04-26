@@ -16,9 +16,8 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - edit account' do
     visit 'https://annieselke.com/'
 
-    sleep 10
-
     #click on hamburger menu
+    sleep 5
     find(:xpath, ta('annieselke:mainPage:hamburgerMenu', "//button[@aria-label='Menu']")).click
     #find(:xpath, "//button[@aria-label='Menu']").click
     # find(ta(   'annieselke:mainPage:hamburgerMenu')).click
@@ -57,7 +56,7 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta(   'annieselke:loginPage:mobile:myAccount')).click
     sleep 4
 
-    # click 'Update personal details' on My Profile
+    #click 'Update personal details' on My Profile
     #find(:xpath, ta('annieselke:loginPage:profileEdit', "(//div[@class='account-tile-links']/ul/li[1])[1]")).click
     #find(:xpath, "(//div[@class='account-tile-links']/ul/li[1])[1]").click
     find(ta(   'annieselke:loginPage:profileEdit')).click

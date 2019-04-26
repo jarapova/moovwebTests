@@ -34,7 +34,8 @@ feature 'TrueAutomation.IO capybara example' do
     p 'product name is present'
     expect(page).to have_selector(:xpath, addToCardBtn)
     p "Button is present"
+
     sleep 5
     end
-end
+  end
 end
