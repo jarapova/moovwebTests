@@ -13,8 +13,10 @@ describe 'Preconditions' do
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Edit account' do
     visit 'https://www.stage.com/'
-
     sleep 5
+
+    # if a modal window appears on the page, it should be closed
+    #click to close modal
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click
     end

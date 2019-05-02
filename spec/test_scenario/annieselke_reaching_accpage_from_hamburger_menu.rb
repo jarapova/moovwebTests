@@ -15,6 +15,7 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - reaching account page from hamburger menu' do
     visit 'https://annieselke.com/'
 
+    # if a modal window appears on the page, it should be closed
     #click to close modal
     sleep 5
     within_frame(0) do

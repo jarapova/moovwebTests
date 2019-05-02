@@ -12,11 +12,11 @@ describe 'Preconditions' do
   end
   feature 'TrueAutomation.IO capybara example' do
     scenario 'Stage.com - Go to account wish list' do
-
       visit 'https://www.stage.com/'
-
-      # #go to stage site and click to close modal
       sleep 5
+
+      # if a modal window appears on the page, it should be closed
+      #click to close modal
       if page.has_xpath?("//span[@class='modalClose modal-close']")
         find(:xpath, "//span[@class='modalClose modal-close']").click
       end

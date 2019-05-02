@@ -15,6 +15,7 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to PDP from product suggestions (Related products)' do
     visit 'https://annieselke.com/Bedding/Brussels-Quilt/p/Q260'
 
+    # if a modal window appears on the page, it should be closed
     #click to close modal
     sleep 5
     within_frame(0) do

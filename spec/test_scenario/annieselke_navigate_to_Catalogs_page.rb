@@ -14,6 +14,8 @@ end
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Navigate to "Catalogs" page' do
     visit 'https://annieselke.com'
+    # if a modal window appears on the page, it should be closed
+    #click to close modal
 
     sleep 4
     within_frame(0) do

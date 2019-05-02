@@ -13,8 +13,10 @@ describe 'Preconditions' do
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Navigate back to home page using breadcrumbs=' do
     visit 'https://www.stage.com/b/kids-baby-nursery-decor/N-1993scj/'
-
     sleep 5
+
+    # if a modal window appears on the page, it should be closed
+    #click to close modal
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click
     end

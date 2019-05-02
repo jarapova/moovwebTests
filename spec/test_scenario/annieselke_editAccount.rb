@@ -4,6 +4,7 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - edit account' do
     visit 'https://annieselke.com/login'
 
+    # if a modal window appears on the page, it should be closed
     #click to close modal
     sleep 5
     within_frame(0) do

@@ -2,7 +2,7 @@ require 'spec_helper'
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Annie Selke - Create account' do
     visit 'https://annieselke.com/'
-
+    # if a modal window appears on the page, it should be closed
     #click to close modal
     sleep 5
     within_frame(1) do
