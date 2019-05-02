@@ -14,7 +14,6 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Check email subscription' do
    visit 'https://www.stage.com/'
 
-    # #go to stage site and click to close modal
      sleep 5
      if page.has_xpath?("//span[@class='modalClose modal-close']")
        find(:xpath, "//span[@class='modalClose modal-close']").click
@@ -31,9 +30,9 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta('stageCom:mainPage:singUp')).click
 
     # close modal2
-   if page.has_xpath?("//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")
+    if page.has_xpath?("//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']")
      find(:xpath, "//div[@class='modal modal-join-rewards']//button[@class='modal__header__close-button']").click
-   end
+    end
 
     #click on logo img
     #find(:xpath, ta('stageCom:mainPage:subscriptionLink', "//p[@class='footer__title-text']/a")).click
@@ -65,6 +64,6 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//input[@value='Sign Up']").click
     find(ta('stageCom:loginPage:signUp')).click
     sleep 5
+    end
   end
-end
 end

@@ -25,7 +25,6 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "//button[@id='nav-button']").click
     find(ta('stageCom:mainPage:sandwichMenu')).click
 
-
     if page.has_xpath?("//div[@class='acsCloseButton--container']")
       find(:xpath, "//a[@class='acsCloseButton--link acsCloseButton acsDeclineButton']").click
     end

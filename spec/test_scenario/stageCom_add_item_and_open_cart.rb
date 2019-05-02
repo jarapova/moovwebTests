@@ -15,11 +15,12 @@ describe 'Preconditions' do
 
         visit 'https://www.stage.com/'
 
-        sleep 10
+        sleep 5
 
         if page.has_xpath?("//span[@class='modalClose modal-close']")
           find(:xpath, "//span[@class='modalClose modal-close']").click
         end
+
         # logIn
         #click on sandwich menu
         #find(:xpath, ta('stageCom:mainPage:sandwichMenu', "//button[@id='nav-button']")).click

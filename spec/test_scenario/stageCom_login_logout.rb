@@ -13,9 +13,7 @@ describe 'Preconditions' do
   end
   feature 'TrueAutomation.IO capybara example' do
     scenario 'Stage.com - login/logout' do
-
       visit 'https://www.stage.com/'
-
 
       sleep 5
       if page.has_xpath?("//span[@class='modalClose modal-close']")

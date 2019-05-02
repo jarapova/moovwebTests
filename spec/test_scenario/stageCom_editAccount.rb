@@ -14,8 +14,6 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Edit account' do
     visit 'https://www.stage.com/'
 
-
-    #go to stage site and click to close modal
     sleep 5
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click

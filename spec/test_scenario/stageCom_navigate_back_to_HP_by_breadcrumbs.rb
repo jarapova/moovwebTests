@@ -12,7 +12,6 @@ describe 'Preconditions' do
   end
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Navigate back to home page using breadcrumbs=' do
-
     visit 'https://www.stage.com/b/kids-baby-nursery-decor/N-1993scj/'
 
     sleep 5
@@ -36,6 +35,6 @@ feature 'TrueAutomation.IO capybara example' do
     #find(:xpath, "(//a[@class='breadcrumbs__link'])[1]").click
     find(ta('stageCom:mainPage:breadcrumbs')).click
 
+    end
   end
-end
 end

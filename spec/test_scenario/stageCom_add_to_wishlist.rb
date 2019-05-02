@@ -14,8 +14,6 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Add item to wishlist' do
     visit 'https://www.stage.com/'
 
-    sleep 10
-
     sleep 5
     if page.has_xpath?("//span[@class='modalClose modal-close']")
       find(:xpath, "//span[@class='modalClose modal-close']").click

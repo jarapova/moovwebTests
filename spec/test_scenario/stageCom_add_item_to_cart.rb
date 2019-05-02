@@ -12,7 +12,6 @@ describe 'Preconditions' do
   end
 feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - add item to cart' do
-
     visit 'https://www.stage.com/'
 
     sleep 5

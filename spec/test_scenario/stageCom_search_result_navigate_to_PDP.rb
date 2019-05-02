@@ -1,8 +1,3 @@
-#Don't work, cause it's looks like baug
-
-
-
-
 require 'spec_helper'
 describe 'Preconditions' do
 
@@ -15,9 +10,8 @@ describe 'Preconditions' do
     Capybara.current_session.driver.quit
     # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
   end
-feature 'TrueAutomation.IO capybara example' do
+  feature 'TrueAutomation.IO capybara example' do
   scenario 'Stage.com - Use search term to see search results' do
-
     visit 'https://www.stage.com/'
 
     sleep 5
@@ -42,5 +36,5 @@ feature 'TrueAutomation.IO capybara example' do
     find(ta('stageCom:mainPage:searchResultItem')).click
     sleep 5
   end
-end
+ end
 end

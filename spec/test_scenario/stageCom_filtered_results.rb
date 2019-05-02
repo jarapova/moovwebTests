@@ -12,9 +12,7 @@ describe 'Preconditions' do
   end
   feature 'TrueAutomation.IO capybara example' do
     scenario 'Stage.com - Apply filter to see filtered results' do
-
       visit 'https://www.stage.com/b/juniors-clothing-tops/N-wr35dq/'
-
 
       # #go to stage site and click to close modal
       sleep 5
